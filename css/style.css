@@ -1,1 +1,416 @@
+/* --- 基礎重設與變數定義 --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --bg-light: #f9f6f0;       /* 溫柔的米白、奶茶底色 */
+    --bg-card: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --primary-color: #556b2f;  /* 墨綠色、植物點綴色 */
+    --accent-color: #c2a685;   /* 方案表格的質樸金色/淺褐 */
+    --desc-box-bg: #f4efe6;    /* 服務說明的內框底色 */
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif, Arial;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- 通用標題樣式 --- */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #222;
+    position: relative;
+    font-weight: 500;
+}
+
+/* １．選單 */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-main);
+    margin-left: 20px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* ２．視覺橫幅 */
+.hero-banner {
+    background-color: #f3eee6; /* 如果無背景大圖，以此雅致米色打底 */
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.hero-mini-logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.btn-book {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #a3b19b; /* 灰綠色按鈕襯托療癒感 */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.btn-book:hover {
+    background-color: var(--primary-color);
+}
+
+/* ３．關於台式按摩 */
+.about-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.about-img-container {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* ４．服務項目 與 方案費用 */
+.services-section {
+    padding: 60px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.service-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #111;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.service-features {
+    list-style: none;
+}
+
+.service-features li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* 以金色小圓圈或圖標替代原圖勾選符號 */
+.service-features li::before {
+    content: "▫️";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-color);
+}
+
+.service-features li span {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.service-features li small {
+    display: block;
+    color: #999;
+    font-size: 12px;
+}
+
+/* 方案費用表格 */
+.price-table-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.price-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 12px;
+    font-weight: 400;
+}
+
+.price-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eedecb;
+}
+
+.price-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.price-cell {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ５．服務說明 */
+.description-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.description-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .description-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.desc-box {
+    background-color: var(--desc-box-bg);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.desc-box h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.desc-box ul {
+    list-style: none;
+}
+
+.desc-box li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+/* ６．位置交通 */
+.location-section {
+    padding: 60px 0;
+}
+
+.location-content {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.map-container {
+    margin-bottom: 20px;
+}
+
+.location-info {
+    text-align: center;
+}
+
+.location-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+/* ７．頁尾 */
+.main-footer {
+    background-color: #eae3d5; /* 圖片下方深色奶茶底 */
+    padding: 50px 0 20px 0;
+    position: relative;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+    gap: 30px;
+    border-bottom: 1px solid #dcd3c1;
+    padding-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo-img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.main-footer h4 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #333;
+    position: relative;
+}
+
+.main-footer ul {
+    list-style: none;
+}
+
+.main-footer ul li {
+    margin-bottom: 8px;
+}
+
+.main-footer a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.main-footer p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* 右下角回到頂端按鈕 */
+.back-to-top {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #333;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 16px;
+}
