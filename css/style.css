@@ -82,16 +82,27 @@ img.responsive-img {
 
 /* ２．視覺橫幅 */
 .hero-banner {
-    background-color: #f3eee6; /* 如果無背景大圖，以此雅致米色打底 */
-    text-align: center;
-    padding: 80px 20px;
-    position: relative;
-}
+    /* 1. 設定背景圖，路徑請確認正確 */
+    background-image: url('/img/logo_icon.png'); 
+    
+    /* 2. 使背景圖覆蓋整個區塊 (關鍵！) */
+    background-size: cover; 
+    
+    /* 3. 使背景圖居中 */
+    background-position: center; 
+    
+    /* 4. 使背景圖不重複 */
+    background-repeat: no-repeat;
 
-.hero-mini-logo {
-    width: 70px;
-    height: auto;
-    margin-bottom: 15px;
+    /* (選用) 為了讓背景圖更融入，可以加入一個半透明的米色遮罩，提高文字閱讀性 */
+    background-color: rgba(243, 238, 230, 0.7); 
+    /* 或者您可以使用 background-image 中的 linear-gradient 來疊加遮罩 */
+    /* background-image: linear-gradient(rgba(243, 238, 230, 0.7), rgba(243, 238, 230, 0.7)), url('/img/logo_icon.png'); */
+
+    /* 其他原本的設定保留 */
+    text-align: center;
+    padding: 80px 20px; /* 您可能需要根據背景圖調整上下內距，以呈現最佳效果 */
+    position: relative;
 }
 
 .hero-content h1 {
