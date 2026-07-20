@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粹癒・養生 - 回歸身心靈的平衡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- １．選單 -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">養生館</div>
+            <nav class="nav-menu">
+                <a href="#">首頁</a>
+                <a href="#about">關於按摩</a>
+                <a href="#services">服務項目</a>
+                <a href="#location">位置交通</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ２．視覺橫幅 -->
+    <section class="hero-banner">
+        <div class="container hero-content">
+            <!-- 圖片提示：此處背景或主要標誌為 /img/logo_icon.png -->
+            <div class="hero-logo-wrapper">
+                <img src="/img/logo_icon.png" alt="粹癒 LOGO 圓形圖標" class="hero-mini-logo">
+            </div>
+            <h1>粹癒・養生</h1>
+            <h2>回歸身心靈的平衡。</h2>
+            <p>在喧囂中，我們為您保留一片淨土，<br>體驗最自然的療癒與放鬆。</p>
+            <a href="#" class="btn-book">[ 立即預約 / Book Now ]</a>
+        </div>
+        <!-- 圖片提示：視覺橫幅右下與左上的植物、茶具等插圖，於 CSS 中以背景圖或在 /img/banner_bg.jpg 呈現 -->
+    </section>
+
+    <!-- ３．關於台式按摩 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">關於台式按摩</h2>
+            <div class="about-img-container">
+                <!-- 圖片提示：精油按摩情境圖 /img/about_massage.jpg -->
+                <img src="/img/about_massage.jpg" alt="精油按摩與香氛情境圖" class="responsive-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ４．服務項目 （包含方案費用） -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">SERVICES</h2>
+            
+            <!-- 方案卡片區 -->
+            <div class="services-grid">
+                <!-- 方案 A -->
+                <div class="service-card">
+                    <!-- 圖片提示：方案A上方意境圖 /img/service_a.jpg -->
+                    <img src="/img/service_a.jpg" alt="台式經絡SPA意境圖" class="service-card-img">
+                    <div class="card-content">
+                        <h3>A・台式經絡SPA</h3>
+                        <ul class="service-features">
+                            <li><span>頭頸部鬆筋按摩</span><small>Head & Neck Muscle Relaxation</small></li>
+                            <li><span>臉部精油SPA</span><small>Facial Essential Oil SPA</small></li>
+                            <li><span>全身經絡指壓、油推SPA</span><small>Full Body Meridian Shiatsu & Oil</small></li>
+                            <li><span>全身鬆筋伸展</span><small>Full Body Relaxation Stretch</small></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 方案 B -->
+                <div class="service-card">
+                    <!-- 圖片提示：方案B上方意境圖 /img/service_b.jpg -->
+                    <img src="/img/service_b.jpg" alt="英式淋巴香草精油SPA意境圖" class="service-card-img">
+                    <div class="card-content">
+                        <h3>B・英式淋巴香草精油SPA</h3>
+                        <ul class="service-features">
+                            <li><span>頭頸部 鬆筋</span><small>Head & Neck Muscle Relaxation</small></li>
+                            <li><span>臉部 精油SPA</span><small>Facial Essential Oil SPA</small></li>
+                            <li><span>全身手技精油SPA</span><small>Full Body Hand-work Essential Oil SPA</small></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案費用表格 -->
+            <div class="price-table-wrapper">
+                <h3 class="price-title">方案費用</h3>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>方案 / 名稱</th>
+                            <th>時間</th>
+                            <th>價格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>基礎保養</td>
+                            <td>60分鐘</td>
+                            <td class="price-cell">$1200</td>
+                        </tr>
+                        <tr>
+                            <td>深層保養</td>
+                            <td>90分鐘</td>
+                            <td class="price-cell">$1500</td>
+                        </tr>
+                        <tr>
+                            <td>極致調理</td>
+                            <td>120分鐘</td>
+                            <td class="price-cell">$1800</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ５．服務說明 -->
+    <section class="description-section">
+        <!-- 圖片提示：周圍裝飾漂浮的植物與精油瓶罐圖案，可存於 /img/deco_leaf.png, /img/deco_bottle.png -->
+        <div class="container">
+            <h2 class="section-title">服務說明</h2>
+            
+            <div class="description-grid">
+                <!-- 區塊 1 -->
+                <div class="desc-box">
+                    <h4>💧 統一嚴選基礎SPA油：</h4>
+                    <ul>
+                        <li>👉 100%純椰子油</li>
+                        <li>👉 法國純甜杏仁油 (天然認證)</li>
+                    </ul>
+                </div>
+
+                <!-- 區塊 2 -->
+                <div class="desc-box">
+                    <h4>🔥 各方案層次差異：</h4>
+                    <ul>
+                        <li>👉 各部位經絡按摩的次數不同</li>
+                        <li>👉 按摩手法種類的多寡</li>
+                        <li>👉 身體放鬆、排壓的捏揉不同</li>
+                        <li>👉 價格、時間也不同</li>
+                    </ul>
+                </div>
+
+                <!-- 區塊 3 -->
+                <div class="desc-box">
+                    <h4>🥣 費用包含如下：</h4>
+                    <ul>
+                        <li>👉 基本場複、消毒、清潔服務</li>
+                        <li>👉 嚴選天然芳香調理精油</li>
+                        <li>👉 提供1次性床墊、內褲(可自取)</li>
+                        <li>👉 提供毛巾x1、饊頭毛巾x1</li>
+                        <li>👉 提供輕柔放鬆音樂</li>
+                        <li>👉 提供熱茶+點心</li>
+                    </ul>
+                </div>
+
+                <!-- 區塊 4 -->
+                <div class="desc-box">
+                    <h4>🍲 完整服務：</h4>
+                    <ul>
+                        <li>👉 SPA服務時間，按好按滿</li>
+                        <li>👉 表訂時間，不包含...</li>
+                        <li>👉 盥洗、解說、喝茶點心時間</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ６．位置交通 -->
+    <section id="location" class="location-section">
+        <div class="container">
+            <h2 class="section-title">位置交通</h2>
+            <div class="location-content">
+                <div class="map-container">
+                    <!-- 圖片提示：地圖截圖 /img/map_info.jpg -->
+                    <img src="/img/map_info.jpg" alt="交通位置地圖導覽" class="responsive-img">
+                </div>
+                <div class="location-info">
+                    <p class="address">📍 板橋區中山路一段50巷12號</p>
+                    <p class="mrt">📍 府中站2號出口走路5分鐘</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ７．頁尾 -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- 品牌 LOGO -->
+            <div class="footer-brand">
+                <!-- 圖片提示：頁尾粹癒圓形 LOGO /img/footer_logo.png -->
+                <img src="/img/footer_logo.png" alt="粹癒" class="footer-logo-img">
+                <h3>粹癒養生館</h3>
+            </div>
+            <!-- 快速連結 -->
+            <div class="footer-links">
+                <h4>快速連結</h4>
+                <ul>
+                    <li><a href="#services">服務項目</a></li>
+                    <li><a href="#services">方案費用</a></li>
+                    <li><a href="#">線上預約</a></li>
+                    <li><a href="#">部落格</a></li>
+                </ul>
+            </div>
+            <!-- 聯絡我們 -->
+            <div class="footer-contact">
+                <h4>聯絡我們</h4>
+                <p>02-1234-5678</p>
+                <p>info@chuyunwellness.tw</p>
+                <p>10:00 - 22:00 (每日)</p>
+            </div>
+            <!-- 追蹤我們 -->
+            <div class="footer-social">
+                <h4>追蹤我們</h4>
+                <p><a href="#">FB</a></p>
+                <p><a href="#">IG</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 粹癒養生館. All Rights Reserved.
+        </div>
+        <!-- 回到頂端按鈕 -->
+        <a href="#" class="back-to-top">↑</a>
+    </footer>
+
+</body>
+</html>
