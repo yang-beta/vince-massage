@@ -201,6 +201,45 @@ body {
     width: 100%;
 }
 
+/* 關於台式按摩色塊內的文字樣式 */
+.placeholder-text-content {
+    max-width: 700px;
+    text-align: center;
+    padding: 20px;
+}
+
+.placeholder-text-content h3.zh-title {
+    font-size: 22px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.placeholder-text-content p.zh-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    color: #444444;
+    margin-bottom: 25px; /* 中英文段落間距 */
+}
+
+.placeholder-text-content h4.en-title {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: #728b6a; /* 淺墨綠色 */
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.placeholder-text-content p.en-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    color: #728b6a; /* 淺墨綠色 */
+}
+
 /* ４．服務項目 與 方案費用 */
 .services-section {
     padding: 60px 0;
