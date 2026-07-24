@@ -507,7 +507,7 @@ body {
 /* 關於台式按摩占位色塊：高度拉大至接近一頁滿版，並包含說明文字 */
 .about-img-placeholder {
     width: 100%;
-    height: calc(60vh - 180px);
+    height: calc(70vh - 180px);
     /*min-height: 480px;*/
     padding: 40px;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
