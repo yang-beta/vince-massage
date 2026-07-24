@@ -69,6 +69,44 @@ body {
     font-size: 12px;
 }
 
+/* --- 內文雙語標題與翻譯樣式 --- */
+.zh-text {
+    display: block;
+    color: var(--text-main);
+}
+
+.en-text {
+    display: block;
+    font-size: 0.85em;
+    color: #728b6a; /* 淺墨綠色 */
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* 方案卡片標題雙語調整 */
+.card-content h3 .en-text {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+/* 服務說明方塊標題雙語調整 */
+.desc-box h4 .en-text {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+/* 表格內雙語調整 */
+.price-table th .en-text {
+    color: #f0f4ef; /* 表格標頭底色較深，英文改為淺綠白色以利閱讀 */
+    font-size: 12px;
+}
+
+.price-table td .en-text {
+    font-size: 12px;
+}
+
 /* １．選單 */
 .navbar {
     background-color: #ffffff;
