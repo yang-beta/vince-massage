@@ -189,7 +189,7 @@ body {
 .about-section {
     padding: 60px 0;
     background-color: #ffffff;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
