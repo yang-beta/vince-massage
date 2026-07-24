@@ -29,21 +29,35 @@ body {
     padding: 0 20px;
 }
 
-img.responsive-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* --- 通用標題樣式 --- */
+/* --- 中英文雙語雙行標題設計 --- */
 .section-title {
     text-align: center;
-    font-size: 28px;
-    letter-spacing: 2px;
     margin-bottom: 30px;
-    color: #222;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title .title-zh {
+    font-size: 28px;
     font-weight: 500;
+    letter-spacing: 2px;
+    color: #222;
+    line-height: 1.2;
+}
+
+.section-title .title-en {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #888;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.inner-title {
+    margin-bottom: 20px;
 }
 
 /* １．選單 */
@@ -82,26 +96,9 @@ img.responsive-img {
 
 /* ２．視覺橫幅 */
 .hero-banner {
-    /* 1. 設定背景圖，路徑請確認正確 */
-    background-image: url('/img/logo_icon.png'); 
-    
-    /* 2. 使背景圖覆蓋整個區塊 (關鍵！) */
-    background-size: cover; 
-    
-    /* 3. 使背景圖居中 */
-    background-position: center; 
-    
-    /* 4. 使背景圖不重複 */
-    background-repeat: no-repeat;
-
-    /* (選用) 為了讓背景圖更融入，可以加入一個半透明的米色遮罩，提高文字閱讀性 */
-    background-color: rgba(243, 238, 230, 0.7); 
-    /* 或者您可以使用 background-image 中的 linear-gradient 來疊加遮罩 */
-    /* background-image: linear-gradient(rgba(243, 238, 230, 0.7), rgba(243, 238, 230, 0.7)), url('/img/logo_icon.png'); */
-
-    /* 其他原本的設定保留 */
+    background-color: #f3eee6;
     text-align: center;
-    padding: 80px 20px; /* 您可能需要根據背景圖調整上下內距，以呈現最佳效果 */
+    padding: 80px 20px;
     position: relative;
 }
 
@@ -129,7 +126,7 @@ img.responsive-img {
 .btn-book {
     display: inline-block;
     padding: 12px 30px;
-    background-color: #a3b19b; /* 灰綠色按鈕襯托療癒感 */
+    background-color: #a3b19b;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
@@ -145,12 +142,16 @@ img.responsive-img {
 .about-section {
     padding: 60px 0;
     background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-img-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%;
 }
 
 /* ４．服務項目 與 方案費用 */
@@ -178,12 +179,6 @@ img.responsive-img {
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
-.service-card-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
 .card-content {
     padding: 25px;
 }
@@ -206,7 +201,6 @@ img.responsive-img {
     padding-left: 25px;
 }
 
-/* 以金色小圓圈或圖標替代原圖勾選符號 */
 .service-features li::before {
     content: "▫️";
     position: absolute;
@@ -235,13 +229,6 @@ img.responsive-img {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-}
-
-.price-title {
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
 }
 
 .price-table {
@@ -341,7 +328,7 @@ img.responsive-img {
 
 /* ７．頁尾 */
 .main-footer {
-    background-color: #eae3d5; /* 圖片下方深色奶茶底 */
+    background-color: #eae3d5;
     padding: 50px 0 20px 0;
     position: relative;
 }
@@ -351,7 +338,7 @@ img.responsive-img {
     grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
     gap: 30px;
     border-bottom: 1px solid #dcd3c1;
-    padding-bottom: 4px;
+    padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -364,12 +351,6 @@ img.responsive-img {
     text-align: center;
 }
 
-.footer-logo-img {
-    width: 60px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
 .footer-brand h3 {
     font-size: 16px;
     letter-spacing: 1px;
@@ -379,7 +360,6 @@ img.responsive-img {
     font-size: 15px;
     margin-bottom: 15px;
     color: #333;
-    position: relative;
 }
 
 .main-footer ul {
@@ -409,7 +389,6 @@ img.responsive-img {
     margin-top: 30px;
 }
 
-/* 右下角回到頂端按鈕 */
 .back-to-top {
     position: absolute;
     bottom: 20px;
@@ -424,4 +403,71 @@ img.responsive-img {
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     font-size: 16px;
+}
+
+/* ==========================================
+   圖片占位色塊 Universal Placeholder Style
+   ========================================== */
+.img-placeholder {
+    background-color: #eae3d5;          /* 暖奶茶色背景 */
+    border: 2px dashed #c2a685;         /* 大地色虛線框 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* 關於台式按摩占位色塊：高度拉大至接近一頁滿版，並包含說明文字 */
+.about-img-placeholder {
+    width: 100%;
+    height: calc(100vh - 180px);
+    min-height: 480px;
+    padding: 40px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+}
+
+.placeholder-text-content {
+    max-width: 650px;
+    text-align: center;
+    color: #5c4e40;
+}
+
+.placeholder-text-content h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.placeholder-text-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+/* 服務項目卡片色塊：高度至少 350px */
+.card-img-placeholder {
+    width: 100%;
+    height: 350px;
+    border-radius: 6px 6px 0 0;
+}
+
+.hero-logo-placeholder {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+}
+
+.map-img-placeholder {
+    width: 100%;
+    min-height: 300px;
+}
+
+.footer-logo-placeholder {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
 }
